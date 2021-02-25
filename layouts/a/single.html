@@ -11,15 +11,20 @@
     {{ .Content }}
     </div>
     <div class="adventureCardContainer-outer">
-    {{ $url := print "/images/a/" .Params.imgDir}}
-    {{ $folder := print "static/" $url }}
-    {{ $files := readDir $folder }}
+    {{ $baseDir := "/images/a/"}}
+    {{ $fullDir := print $baseDir "full/" .Params.imgDir "/"}}
+    {{ $thumbDir := print $baseDir "thumb/" .Params.imgDir "/"}}
+    {{ $walkDir := print "static/" $thumbDir }}
+    {{ $files := readDir $walkDir }}
     {{ range $files }}
         {{ if ne .Name "cover.jpg" }}
+        {{ $fullFile := print $fullDir .Name}}
+        {{ $thumbFile := print $thumbDir .Name}}
         <div class="adventureCardContainer-inner">
             <div class="adventureCard">
                 <div class="flexible"></div>
-                    <img src="{{$url}}/{{.Name}}">
+                <a href="{{$fullFile}}">
+                    <img src="{{$thumbFile}}">
                 </a>
             </div>
         </div>

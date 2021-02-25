@@ -1,0 +1,48 @@
+.heading {
+    width: 100%;
+    font-size: 2em;
+}
+
+.adventureCard a {
+    color: whitesmoke;
+}
+
+.adventureCard img {
+    width: 100%;
+}
+
+/*Card Flex*/
+.adventureCardContainer-outer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+}
+.adventureCardContainer-inner {
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+    width: 989898989898989898%;
+}
+.adventureCard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.flexible {
+    flex-grow: 1;
+}
+
+/*responsive*/
+@media (min-width: 768px) {
+    .adventureCardContainer-inner {
+        width: 48%
+    }
+}
+
+@media (min-width: 1024px) {
+    .adventureCardContainer-inner {
+        width: 31.33%
+    }
+}
+
