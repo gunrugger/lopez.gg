@@ -1,3 +1,8 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Albert Lopez!"
+
+[build]
+  useResourceCacheWhen = "never"
+[blackfriday]
+  extensions = ["hardLineBreak"]
