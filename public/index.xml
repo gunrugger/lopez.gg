@@ -6,10 +6,19 @@
     <description>Recent content on Albert Lopez!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Oct 2020 10:34:26 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://lopez.gg/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Selfies 2021</title>
+      <link>http://lopez.gg/a/2021-selfies/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lopez.gg/a/2021-selfies/</guid>
+      <description>Just a dumping ground for images of myself.</description>
+    </item>
     
     <item>
       <title>2020 Hike With Mickey</title>
@@ -27,6 +36,24 @@
       
       <guid>http://lopez.gg/a/2020-10-03-photoswithnathan/</guid>
       <description>I went to nathan&amp;rsquo;s house and we did a little photo shoot! I had a great time, and he said: &amp;ldquo;never taking your picture ever nerver ever again&amp;rdquo;. Haha.</description>
+    </item>
+    
+    <item>
+      <title>2021 Skiing in flag AZ with Cameron</title>
+      <link>http://lopez.gg/a/2021-02-22-flagstaffskiwithcam/</link>
+      <pubDate>Sat, 03 Oct 2020 10:34:26 -0700</pubDate>
+      
+      <guid>http://lopez.gg/a/2021-02-22-flagstaffskiwithcam/</guid>
+      <description>I went skiing with cameron! I didn&amp;rsquo;t get to bring my camera, but I did bring my Cameron which works in a pinch.</description>
+    </item>
+    
+    <item>
+      <title>2021 SNOWCAMPING - MidnightLake.md</title>
+      <link>http://lopez.gg/a/2021-01-05-snowcampingmidnightlake/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lopez.gg/a/2021-01-05-snowcampingmidnightlake/</guid>
+      <description>SNOW CAMPING 2020! I din&amp;rsquo;t have my camera yet, but I still had a great time! We had sausages, martinis, meatballs and cheese, zac made DELICIOUS bokho found here: https://cooking.nytimes.com/recipes/1019891-bo-kho-vietnamese-braised-beef-stew</description>
     </item>
     
   </channel>
