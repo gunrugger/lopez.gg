@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/homepage.css">
-    <link rel="stylesheet" type="text/css" href="/css/me.css">
+    <link rel="stylesheet" type="text/css" href="/css/a.css">
 </head>
 <body>
     <div class="heading">
     {{ .Content }}
     </div>
     <div class="adventureCardContainer-outer">
-    {{ $url := print "/images/me/" .Params.imgDir}}
+    {{ $url := print "/images/a/" .Params.imgDir}}
     {{ $folder := print "static/" $url }}
     {{ $files := readDir $folder }}
     {{ range $files }}
