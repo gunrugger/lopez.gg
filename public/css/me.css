@@ -1,0 +1,19 @@
+.heading {
+  width: 100%;
+  font-size: 2em;
+}
+
+.adventureCardContainer {
+    width: 80%;
+}
+.adventureCard {
+    max-width: 18%;
+    float: left;
+    margin: 1%;
+}
+.adventureCard img{
+  max-width: 100%;
+}
+.adventureCard a {
+    color: whitesmoke;
+}

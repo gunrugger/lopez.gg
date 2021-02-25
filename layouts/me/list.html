@@ -8,18 +8,21 @@
 </head>
 <body>
     <div class="heading">
-	{{ .Content }}
+    {{ .Content }}
     </div>
     <br>
-    <div class="adventureCardContainer">
-    {{ range .Pages }}
-        <div class="adventureCard">
-            <a href="{{.Permalink}}">
-		<img src="/images/me/{{.Params.imgDir}}/cover.jpg"> 
-		{{.Title}}
-	    </a>
+    <div class="adventureCardContainer-outer">
+        {{ range .Pages.Reverse }}
+        <div class="adventureCardContainer-inner">
+            <div class="adventureCard">
+                <div class="flexible"></div>
+                <a href="{{.Permalink}}">
+                    <img src="/images/me/{{.Params.imgDir}}/cover.jpg"> 
+                    {{.Title}}
+                </a>
+            </div>
         </div>
-    {{ end }}
+        {{ end }}
     </div>
 </body>
 </html>

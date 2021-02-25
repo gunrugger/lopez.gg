@@ -1,6 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Albert Lopez!"
+ignoreFiles = [".DS_Store"]
 
 [build]
   useResourceCacheWhen = "never"
