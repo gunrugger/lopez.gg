@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css" href="/css/spells.css">
+<div style="height: 8in;font-size: 2.3in;text-align: center;">don't print me!</div>
+{{ range $spellName, $cardInfo := .Site.Data.spells }}
+	{{ range $level, $levelInfo := .levels }}
+		<div class="card" style="background-image: url(/images/cardTemplates/cardBorder.png), url(/images/cards/spells/{{ replaceRE "[ ,]" "" $spellName }}{{ $level }}.png)">
+			<span class="text manaCost">{{ .normalCost }}<br>{{ .quickCost }}</span>
+			<span class="text name">{{ $spellName }} {{ $level }}</span> <br><br>
+			<span class="text info">
+				{{ range $devotionName, $devotionValue := .devotionRequirements }}
+					{{ title $devotionName }}: {{ $devotionValue }} <br>
+				{{ end }}
+			</span> 
+			<span class="text cardType"> {{ title $cardInfo.type }} </span> 
+			<div class="cardTextContainer">
+				<div class="text cardText">
+					{{ replace .cardText "\\n" "<br/>" | safeHTML }}
+				</div> 
+			</div>
+		</div>
+	{{ end }}
+{{ end }}

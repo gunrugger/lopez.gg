@@ -1,0 +1,125 @@
+Apparition:
+  manaCost: 4
+  quickCost: 2
+  stats: 4/4
+  text: "Scary, brave, intangible, possessing, phantasmal, obstinate."
+Corpse:
+  manaCost: 0
+  quickCost: 0
+  stats: 0/1
+  text: 'dead'
+Dragon:
+  stats: 6/2
+  manaCost: 7
+  quickCost: 4
+  text: "Flying, brave.\n1: Swap ATT/DEF until EOD.\n2X: Burn target for X\n3X: Freeze target for X"
+Dragon Pup:
+  stats: 3/1
+  manaCost: 4
+  quickCost: 2
+  text: "2: Swap ATT/DEF until EOD."
+Elder Dragon:
+  stats: 8/3
+  manaCost: 9
+  quickCost: 3
+  text: "Flying, brave.\n0: Swap ATT/DEF until EOD.\nX: Burn target for X\n2X: Freeze target for X\nX: Counter target spell that targets a dragon, if the spell level is X or less.\n2x: Take control of entity with mana cost of X."
+Elemental Golem:
+  manaCost: 4
+  quickCost: 1
+  stats: 3/3
+  text: "Add 1 to all values of all burning, freeze, and damage spells you establish."
+Flame Elemental:
+  manaCost: X+2
+  quickCost: 3
+  stats: X/1
+  text: "Reckless, Ferocious, Fleeting, Scorching"
+Goblin:
+  stats: 2/1
+  manaCost: 1
+  quickCost: 1
+  text: "Reckless"
+Mana Golem:
+  manaCost: 4
+  quickCost: 1
+  stats: 3/3
+  text: "Reduce the normal cost of your spells by 1."
+Quicken Golem:
+  manaCost: 4
+  quickCost: 1
+  stats: 3/3
+  text: "Reduce the quicken cost of all of your spells by 1."
+Saundersian Ant:
+  stats: 0/1
+  manaCost: 1
+  quickCost: 1
+  text: "Sac this: Deal 1 damage to target foe.\n(BoC, attacking, not in a fray) sac this: Deal 1 damage to defending player."
+Skeleton:
+  manaCost: 1
+  quickCost: 1
+  stats: "2/1"
+  text: "undead"
+Soldier Ant:
+  stats: 0/1
+  manaCost: 1
+  quickCost: 0
+  text: "pack hunter 5"
+Spider:
+  manaCost: 5
+  quickCost: 5
+  stats: 2/4
+  text: "Venomous Q=4 P=1\n2/1: Summon spider web.\nU, use another spider, X/X: Advance to spider corpse with an egg value of X."
+Spider Corpse:
+  manaCost: 2
+  quickCost: 1
+  stats: 0/3
+  text: "Dead. Hatch 2, spider hatchling.\nDecrement the egg value: Prevent the next 1 damage dealt to this entity."
+Spider Hatchling:
+  manaCost: 3
+  quickCost: 3
+  stats: 0/1
+  text: "Venomous Q=1 P=4\n6/4: Advance to Spider"
+Spider Web:
+  manaCost: 1
+  quickCost: 1
+  stats: 0/1
+  text: "Inanimate, Bastioned, vulnerable, grabbing\nIf a spider web can grapple, it must. If multiple foes may be grappled, the grappled foe is determined randomly.\nGrapples with substance → Both substances becomes used.\n(Grappling) Both substances cannot be restored."
+Stone Elemental:
+  manaCost: 2X
+  quickCost: 2
+  stats: X/X
+  text: "Reckless, Ferocious"
+Stone Golem:
+  manaCost: 4
+  quickCost: 1
+  stats: 3/3
+  text: "Each golem you control gets +1/+1"
+Vegetation Elemental:
+  manaCost: 2X
+  quickCost: 1
+  stats: X/X
+  text: "Grabbing. Grabbed entities become used, cannot be grabbed by other substances, and cannot restore normally.\nBoO → Poison all entities grabbed by this for 1. For each damage dealt this way, this gets +1/+1 until EoD."
+Wall:
+  manaCost: 2
+  quickCost: 1
+  stats: 0/4
+  text: "Bastioned, inanimate"
+Wolf:
+  manaCost: 2
+  quickCost: 2
+  stats: 1/1
+  text: "Pack hunter 3, 6."
+Wolf Pup:
+  manaCost: 1
+  quickCost: 1
+  stats: 0/1
+  text: "2: advance to Wolf."
+Worker Ant:
+  stats: 0/1
+  manaCost: 0
+  quickCost: 1
+  text: "U, Use 2 other worker ants/2: Gain control of target dead entity.\nU, Use 2 other worker ants/2: Use target entity, it becomes vulnerable until EoD."
+Zombie:
+  manaCost: 2
+  quickCost: 1
+  stats: 1/1
+  text: "Grabbing, tireless, undead.\nIf {dies to burn} instead, {advance to skeleton}.\n(Grappling) Cannot attack, join, or deal combat damage normally. Grappled entity cannot restore normally.\n(Grappling) EoD → Deal combat damage to grappled entity. Entities that die this way relinquish their corpse to you."

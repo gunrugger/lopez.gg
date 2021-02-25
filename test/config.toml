@@ -1,0 +1,7 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Wizards: Spellbook"
+[build]
+  useResourceCacheWhen = "never"
+[blackfriday]
+  extensions = ["hardLineBreak"]
