@@ -5,4 +5,4 @@ date: 2021-12-30
 draft: false
 ---
 
-Just a dumping ground for images of myself.
+I bought a new camera, and now I love taking picutes of me and the things around me! Here are some entries from that first category!
