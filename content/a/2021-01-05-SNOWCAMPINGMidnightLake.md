@@ -1,7 +1,7 @@
 ---
 title: "2021 SNOWCAMPING - MidnightLake.md"
 imgDir: "2021-01-05-SNOWCAMPINGMidnightLake"
-date: 2020-01-05
+date: 2021-01-05
 draft: false
 ---
 
