@@ -1,8 +1,10 @@
 baseURL = "http://lopez.gg/"
 languageCode = "en-us"
 title = "Albert Lopez!"
+buildFuture = "true"
 
 [build]
   useResourceCacheWhen = "never"
 [blackfriday]
   extensions = ["hardLineBreak"]
+
