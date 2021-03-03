@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/css/a.css">
+</head>
+<body>
+    <div class="heading">
+        <a href="/"><img src="/images/logo.svg"></a>
+    {{ .Content }}
+    </div>
+    <br>
+    <div class="adventureCardContainer-outer">
+        {{ range .Pages }}
+        <div class="adventureCardContainer-inner">
+            <div class="adventureCard">
+                <div class="flexible"></div>
+                <a href="{{.Permalink}}">
+                    <img src="/images/m/thumb/{{.Params.imgDir}}/cover.jpg">
+                    {{.Title}}
+                </a>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/css/a.css">
+</head>
+<body>
+    <div class="heading">
+        <a href="/"><img src="/images/logo.svg"></a>
+    {{ .Content }}
+    </div>
+    <div class="adventureCardContainer-outer">
+    {{ $baseDir := "/images/m"}}
+    {{ $fullDir := print $baseDir "/full/" .Params.imgDir}}
+    {{ $thumbDir := print $baseDir "/thumb/" .Params.imgDir}}
+    {{ $walkDir := print "/static" $thumbDir }}
+    {{ $files := readDir $walkDir }}
+    {{ range $files }}
+        {{ if ne .Name "cover.jpg" }}
+        {{ $fullFile := print $fullDir "/" .Name}}
+        {{ $thumbFile := print $thumbDir "/" .Name}}
+        <div class="adventureCardContainer-inner">
+            <div class="adventureCard">
+                <div class="flexible"></div>
+                <a href="{{$fullFile}}">
+                    <img src="{{$thumbFile}}">
+                </a>
+            </div>
+        </div>
+        {{ end }}
+    {{ end }}
+    </div>
+</body>
+</html>
