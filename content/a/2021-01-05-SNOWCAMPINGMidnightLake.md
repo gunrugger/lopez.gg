@@ -1,5 +1,5 @@
 ---
-title: "2021 SNOWCAMPING - MidnightLake.md"
+title: "2021 SNOWCAMPING - MidnightLake"
 imgDir: "2021-01-05-SNOWCAMPINGMidnightLake"
 date: 2021-01-05
 draft: false
