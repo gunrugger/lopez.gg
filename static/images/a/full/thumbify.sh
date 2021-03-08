@@ -7,7 +7,9 @@ fi
 
 for DIR in "$@"; do
     mkdir ../thumb/$DIR
+    mv $DIR/*.MOV ./
     for FILE in $DIR/*; do
         convert $FILE -resize 1000 ../thumb/$FILE;
     done
+    mv *.MOV $DIR/
 done
