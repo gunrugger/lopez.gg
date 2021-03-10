@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/default.css">
     <link rel="stylesheet" type="text/css" href="/css/gallery.css">
+    <script src="/js/slideshow.js"></script> 
 </head>
 <body>
     <div class="heading">
@@ -24,13 +25,21 @@
         <div class="adventureCardContainer-inner">
             <div class="adventureCard">
                 <div class="flexible"></div>
-                <a href="{{$fullFile}}">
-                    <img src="{{$thumbFile}}">
-                </a>
+                <div onclick="slideshowOn(this.childNodes[1].src)">
+                    <img class="galleryImage" src="{{$thumbFile}}">
+                </div>
             </div>
         </div>
         {{ end }}
     {{ end }}
+    </div>
+    <div class="slideshow disabled">
+        <img class="ssFull ssButton" src="/images/ssFull.png" onclick="slideshowFull()">
+        <img class="ssClose ssButton" src="/images/ssClose.png" onclick="slideshowOff()">
+        <img class="ssBack ssButton" src="/images/ssBack.png" onclick="slideshowBack()">
+        <img class="ssNext ssButton" src="/images/ssNext.png" onclick="slideshowNext()">
+        <div class="floater"></div>
+        <img id="ssImage" src="">
     </div>
 </body>
 </html>
