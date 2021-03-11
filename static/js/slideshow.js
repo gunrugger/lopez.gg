@@ -77,7 +77,7 @@ function getSlideshowImages()
         if (img == undefined)
         {
             continue;
-        } else if (img == "cover.jpg") {
+        } else if ( img.indexOf("cover.jpg") > -1 ) {
             continue;
         } else {
             imageUrls.push(img);
