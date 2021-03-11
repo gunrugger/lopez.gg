@@ -1,15 +1,17 @@
 #!/bin/bash
-mkdir ../thumb
+[ -d ../thumb ] || mkdir ../thumb
 if [ $# -eq 0 ]; then
     echo "Please specify a directory name."
     exit 1
 fi
 
 for DIR in "$@"; do
-    mkdir ../thumb/$DIR
-    mv $DIR/*.MOV ./
+    [ -d ../thumb/$DIR ] || mkdir ../thumb/$DIR
+    [ -f $DIR/*.MOV  ] && mv $DIR/*.MOV ./
+    [ -f $DIR/*.gif  ] && mv $DIR/*.gif ./
     for FILE in $DIR/*; do
         convert $FILE -resize 1000 ../thumb/$FILE;
     done
-    mv *.MOV $DIR/
+    [ -f *.MOV  ] && mv *.MOV $DIR/
+    [ -f *.gif  ] && mv *.gif $DIR/
 done
