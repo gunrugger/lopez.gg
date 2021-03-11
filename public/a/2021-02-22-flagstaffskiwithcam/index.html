@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/homepage.css">
-    <link rel="stylesheet" type="text/css" href="/css/a.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/gallery.css">
+    <script src="/js/slideshow.js"></script> 
 </head>
 <body>
     <div class="heading">
@@ -25,15 +26,23 @@
         <div class="adventureCardContainer-inner">
             <div class="adventureCard">
                 <div class="flexible"></div>
-                <a href="/images/a/full/2021-02-22-flagstaffSkiWithCam/01.jpg">
-                    <img src="/images/a/thumb/2021-02-22-flagstaffSkiWithCam/01.jpg">
-                </a>
+                <div onclick="slideshowOn(this.childNodes[1].src)">
+                    <img class="galleryImage" src="/images/a/thumb/2021-02-22-flagstaffSkiWithCam/01.jpg">
+                </div>
             </div>
         </div>
         
     
         
     
+    </div>
+    <div class="slideshow disabled">
+        <img class="ssFull ssButton" src="/images/ssFull.png" onclick="slideshowFull()">
+        <img class="ssClose ssButton" src="/images/ssClose.png" onclick="slideshowOff()">
+        <img class="ssBack ssButton" src="/images/ssBack.png" onclick="slideshowBack()">
+        <img class="ssNext ssButton" src="/images/ssNext.png" onclick="slideshowNext()">
+        <div class="floater"></div>
+        <img id="ssImage" src="">
     </div>
 </body>
 </html>

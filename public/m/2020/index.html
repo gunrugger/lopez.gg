@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/gallery.css">
+    <script src="/js/slideshow.js"></script> 
+</head>
+<body>
+    <div class="heading">
+        <a href="/"><img src="/images/logo.svg"></a>
+    <p>2020 was a weird year. I didn&rsquo;t like cameras, so I didn&rsquo;t have a lot of pictures taken of me. That changed early 2021.</p>
+
+    </div>
+    <div class="adventureCardContainer-outer">
+    
+    
+    
+    
+    
+    
+        
+        
+        
+        <div class="adventureCardContainer-inner">
+            <div class="adventureCard">
+                <div class="flexible"></div>
+                <div onclick="slideshowOn(this.childNodes[1].src)">
+                    <img class="galleryImage" src="/images/m/thumb/2020/0001.jpg">
+                </div>
+            </div>
+        </div>
+        
+    
+        
+        
+        
+        <div class="adventureCardContainer-inner">
+            <div class="adventureCard">
+                <div class="flexible"></div>
+                <div onclick="slideshowOn(this.childNodes[1].src)">
+                    <img class="galleryImage" src="/images/m/thumb/2020/0002.jpg">
+                </div>
+            </div>
+        </div>
+        
+    
+        
+        
+        
+        <div class="adventureCardContainer-inner">
+            <div class="adventureCard">
+                <div class="flexible"></div>
+                <div onclick="slideshowOn(this.childNodes[1].src)">
+                    <img class="galleryImage" src="/images/m/thumb/2020/0003.jpg">
+                </div>
+            </div>
+        </div>
+        
+    
+        
+        
+        
+        <div class="adventureCardContainer-inner">
+            <div class="adventureCard">
+                <div class="flexible"></div>
+                <div onclick="slideshowOn(this.childNodes[1].src)">
+                    <img class="galleryImage" src="/images/m/thumb/2020/0004.jpg">
+                </div>
+            </div>
+        </div>
+        
+    
+        
+        
+        
+        <div class="adventureCardContainer-inner">
+            <div class="adventureCard">
+                <div class="flexible"></div>
+                <div onclick="slideshowOn(this.childNodes[1].src)">
+                    <img class="galleryImage" src="/images/m/thumb/2020/0005.jpg">
+                </div>
+            </div>
+        </div>
+        
+    
+        
+    
+    </div>
+    <div class="slideshow disabled">
+        <img class="ssFull ssButton" src="/images/ssFull.png" onclick="slideshowFull()">
+        <img class="ssClose ssButton" src="/images/ssClose.png" onclick="slideshowOff()">
+        <img class="ssBack ssButton" src="/images/ssBack.png" onclick="slideshowBack()">
+        <img class="ssNext ssButton" src="/images/ssNext.png" onclick="slideshowNext()">
+        <div class="floater"></div>
+        <img id="ssImage" src="">
+    </div>
+</body>
+</html>
