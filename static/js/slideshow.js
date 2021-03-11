@@ -28,7 +28,6 @@ function slideshowFull()
     thumbUrl = slideshowImages[currentSlide];
     fullUrl = thumbUrl.replace("/thumb/", "/full/")
     window.open(fullUrl,"_self")
-
 }
 function slideshowBack()
 {
@@ -75,8 +74,12 @@ function getSlideshowImages()
         elem = elems[i];
         img = elem.src;
         //drop the url into an array
-        if (img != undefined)
+        if (img == undefined)
         {
+            continue;
+        } else if (img == "cover.jpg") {
+            continue;
+        } else {
             imageUrls.push(img);
         }
     }
