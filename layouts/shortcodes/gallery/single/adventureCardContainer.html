@@ -1,0 +1,29 @@
+{{ $scratch := .Scratch }}
+{{ $scratch.Set "currentSection" (.Get 0) }}
+    <div class="adventureCardContainer-outer">
+    {{ range .Site.Sections }}
+        {{ range .Pages }}
+            {{ if eq .Dir ($scratch.Get "currentSection") }}
+                {{ $baseDir := print "/images/" ($scratch.Get "currentSection") }}
+                {{ $fullDir := print $baseDir "/full/" .Params.imgDir}}
+                {{ $thumbDir := print $baseDir "/thumb/" .Params.imgDir}}
+                {{ $walkDir := print "/static" $thumbDir }}
+                {{ $files := readDir $walkDir }}
+                {{ range $files }}
+                    {{ if ne .Name "cover.jpg" }}
+                    {{ $fullFile := print $fullDir "/" .Name}}
+                    {{ $thumbFile := print $thumbDir "/" .Name}}
+                    <div class="adventureCardContainer-inner">
+                        <div class="adventureCard">
+                            <div class="flexible"></div>
+                            <div onclick="slideshowOn(this.childNodes[1].src)">
+                                <img class="galleryImage" src="{{$thumbFile}}">
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    </div>

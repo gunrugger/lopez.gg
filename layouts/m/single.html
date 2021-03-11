@@ -1,46 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/default.css">
-    <link rel="stylesheet" type="text/css" href="/css/gallery.css">
-    <script src="/js/slideshow.js"></script> 
-    <title>{{ .Title }}</title>
-</head>
+{{ partial "head.html" . }}
 <body>
-    <div class="heading">
-        <a href="/"><img src="/images/logo.svg"></a>
-    {{ .Content }}
-    </div>
-    <div class="adventureCardContainer-outer">
-    {{ $baseDir := "/images/m"}}
-    {{ $fullDir := print $baseDir "/full/" .Params.imgDir}}
-    {{ $thumbDir := print $baseDir "/thumb/" .Params.imgDir}}
-    {{ $walkDir := print "/static" $thumbDir }}
-    {{ $files := readDir $walkDir }}
-    {{ range $files }}
-        {{ if ne .Name "cover.jpg" }}
-        {{ $fullFile := print $fullDir "/" .Name}}
-        {{ $thumbFile := print $thumbDir "/" .Name}}
-        <div class="adventureCardContainer-inner">
-            <div class="adventureCard">
-                <div class="flexible"></div>
-                <div onclick="slideshowOn(this.childNodes[1].src)">
-                    <img class="galleryImage" src="{{$thumbFile}}">
-                </div>
-            </div>
-        </div>
-        {{ end }}
-    {{ end }}
-    </div>
-    <div class="slideshow disabled">
-        <img class="ssFull ssButton" src="/images/ssFull.png" onclick="slideshowFull()">
-        <img class="ssClose ssButton" src="/images/ssClose.png" onclick="slideshowOff()">
-        <img class="ssBack ssButton" src="/images/ssBack.png" onclick="slideshowBack()">
-        <img class="ssNext ssButton" src="/images/ssNext.png" onclick="slideshowNext()">
-        <div class="floater"></div>
-        <img id="ssImage" src="">
-    </div>
+	<div>
+        {{ partial "logo.html" . }}
+		{{ .Content }}
+		<div class="adventureCardContainer-outer">
+		{{ $baseDir := "/images/m"}}
+		{{ $fullDir := print $baseDir "/full/" .Params.imgDir}}
+		{{ $thumbDir := print $baseDir "/thumb/" .Params.imgDir}}
+		{{ $walkDir := print "/static" $thumbDir }}
+		{{ $files := readDir $walkDir }}
+		{{ range $files }}
+			{{ if ne .Name "cover.jpg" }}
+			{{ $fullFile := print $fullDir "/" .Name}}
+			{{ $thumbFile := print $thumbDir "/" .Name}}
+			<div class="adventureCardContainer-inner">
+				<div class="adventureCard">
+					<div class="flexible"></div>
+					<div onclick="slideshowOn(this.childNodes[1].src)">
+						<img class="galleryImage" src="{{$thumbFile}}">
+					</div>
+				</div>
+			</div>
+			{{ end }}
+		{{ end }}
+		</div>
+		{{ partial "slideshow.html" . }}
+	</div>
 </body>
 </html>

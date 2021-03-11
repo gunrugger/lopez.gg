@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/default.css">
-    <title>Lopez.gg</title>
-</head>
+{{ partial "head.html" . }}
 <body>
     <div>
-        {{ with .Site.Data.home }}
-            <h1>{{ .title }}</h1>
-            <h2>{{ .subtitle }}</h2>
-        {{ end }}
-    	<a class="link" href="/a">adventures</a>
-    	<a class="link" href="/m">me</a>
-    	<!--<a class="link" href="/r">resume</a>-->
-    </div> 
+        {{ .Content }}
+    </div>
 </body>
+{{ partial "foot.html" . }}
 </html>

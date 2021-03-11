@@ -1,0 +1,19 @@
+{{ $scratch := .Scratch }}
+{{ $scratch.Set "currentSection" (print (.Get 0) "/") }}
+<div class="adventureCardContainer-outer">
+    {{ range .Site.Sections }}
+        {{ range .Pages }}
+            {{ if eq .Dir ($scratch.Get "currentSection") }}
+            <div class="adventureCardContainer-inner">
+                <div class="adventureCard">
+                    <a href="{{.Permalink}}">
+                        <img src="/images/{{ $scratch.Get `currentSection` }}/thumb/{{.Params.imgDir}}/cover.jpg">
+                        <div class="flexible"></div>
+                        {{.Title}}
+                    </a>
+                </div>
+            </div>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</div>
