@@ -3,18 +3,14 @@ var slideShow = "";
 var slideshowImages = [];
 var currentSlide = 0;
 
-//When the document is done loading, these will run
-document.addEventListener("DOMContentLoaded", function(event)
-{ 
+//---HIGH LEVEL SLIDESHOW CONTROLS---//
+function slideshowOn(url)
+{
     //get the slideshow div
     slideshow = document.getElementsByClassName("slideshow")[0];
     //populate the slideshowImages array
     slideshowImages = getSlideshowImages();
-});
 
-//---HIGH LEVEL SLIDESHOW CONTROLS---//
-function slideshowOn(url)
-{
     setSlideshowImage(url);
     slideshow.classList.remove("disabled");
     currentSlide = getSlideNumberByUrl(url);
