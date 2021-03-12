@@ -7,6 +7,5 @@ draft: false
 
 # albert lopez
 ## this is my website
-[adventures](/a)
-[me](/m)
+[adventures](/a)[me](/m)
 
