@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Me on Albert Lopez!</title>
+    <title>Adventures on Albert Lopez!</title>
     <link>http://lopez.gg/a/</link>
-    <description>Recent content in Me on Albert Lopez!</description>
+    <description>Recent content in Adventures on Albert Lopez!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Feb 2021 10:34:26 -0700</lastBuildDate>
-    
-	<atom:link href="http://lopez.gg/a/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 18 Feb 2021 10:34:26 -0700</lastBuildDate><atom:link href="http://lopez.gg/a/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2021 San Francisco With Uncle Joe</title>
       <link>http://lopez.gg/a/2021-03-xx-sanfranciscowithunclejoe/</link>
       <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>http://lopez.gg/a/2021-03-xx-sanfranciscowithunclejoe/</guid>
-      <description>Went to San Fran with Uncle joe! Stopped at Shasta Lake on the way back to roseburg for a quick spontaneous sec.</description>
+      <description>Went to San Fran with Uncle joe! Stopped at Shasta Lake on the way back to roseburg for a quick spontaneous sec.                                                                                                                                                                                                                              </description>
     </item>
     
     <item>
@@ -26,7 +22,7 @@
       <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>http://lopez.gg/a/2021-02-27-grandcanyon/</guid>
-      <description>Semi-spontaneous grand canyon trip! My friends were all working, but I went anyway haha.</description>
+      <description>Semi-spontaneous grand canyon trip! My friends were all working, but I went anyway haha.                                                                                                                                                                          </description>
     </item>
     
     <item>
@@ -35,7 +31,7 @@
       <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>http://lopez.gg/a/2021-02-22-flagstaffskiwithcam/</guid>
-      <description>I went skiing with cameron! I didn&amp;rsquo;t get to bring my camera, but I did bring my Cameron which works in a pinch.</description>
+      <description>I went skiing with cameron! I didn&amp;rsquo;t get to bring my camera, but I did bring my Cameron which works in a pinch.      </description>
     </item>
     
     <item>
@@ -44,7 +40,8 @@
       <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://lopez.gg/a/2021-01-05-snowcampingmidnightlake/</guid>
-      <description>SNOW CAMPING 2020! I didn&amp;rsquo;t have my camera yet, but I still had a great time! We had sausages, martinis, meatballs and cheese, zac made DELICIOUS bokho found here: https://cooking.nytimes.com/recipes/1019891-bo-kho-vietnamese-braised-beef-stew</description>
+      <description>SNOW CAMPING 2020!
+I didn&amp;rsquo;t have my camera yet, but I still had a great time! We had sausages, martinis, meatballs and cheese, zac made DELICIOUS bokho found here: https://cooking.nytimes.com/recipes/1019891-bo-kho-vietnamese-braised-beef-stew                                                                                                                                                                                                                                                                  </description>
     </item>
     
     <item>
@@ -53,7 +50,7 @@
       <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>http://lopez.gg/a/2020-02-22-hikewithmickey/</guid>
-      <description>I went on a hike with mickey, but I don&amp;rsquo;t remember where&amp;hellip;</description>
+      <description>I went on a hike with mickey, but I don&amp;rsquo;t remember where&amp;hellip;                                                                                                                                      </description>
     </item>
     
   </channel>

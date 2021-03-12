@@ -5,10 +5,6 @@
     <link>http://lopez.gg/categories/</link>
     <description>Recent content in Categories on Albert Lopez!</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="http://lopez.gg/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="http://lopez.gg/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
