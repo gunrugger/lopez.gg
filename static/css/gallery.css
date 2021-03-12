@@ -12,6 +12,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 80%;
+    margin-left: 10%;
 }
 .adventureCardContainer-inner {
     display: flex;

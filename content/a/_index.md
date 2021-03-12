@@ -7,4 +7,3 @@ draft: false
 ## I have started going on many adventures! Here are some of them:
 
 {{< gallery/list/adventureCardContainer "a" >}}
-

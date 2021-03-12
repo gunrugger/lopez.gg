@@ -2,8 +2,8 @@
 <html lang="en">
 {{ partial "head.html" . }}
 <body>
+	{{ partial "navbar.html" . }}
 	<div>
-        {{ partial "logo.html" . }}
 		{{ .Content }}
 		<div class="adventureCardContainer-outer">
 		{{ $baseDir := "/images/m"}}
@@ -29,4 +29,5 @@
 		{{ partial "slideshow.html" . }}
 	</div>
 </body>
+{{ partial "foot.html" . }}
 </html>
