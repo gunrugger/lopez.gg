@@ -23,9 +23,7 @@
                         <div class="adventureCardContainer-inner">
                             <div class="adventureCard">
                                 <div class="flexible"></div>
-                                <div onclick="slideshowOn(this.childNodes[1].src)">
-                                    <img class="galleryImage" src="{{$thumbFile}}">
-                                </div>
+                                <img onclick="slideshowOn(this.src)" class="galleryImage" src="{{$thumbFile}}">
                             </div>
                         </div>
                     {{ end }}
