@@ -1,8 +1,10 @@
 <div class="slideshow disabled">
 	<img class="ssFull ssButton" src="/images/ssFull.png" onclick="slideshowFull()">
 	<img class="ssClose ssButton" src="/images/ssClose.png" onclick="slideshowOff()">
-	<img class="ssBack ssButton" src="/images/ssBack.png" onclick="slideshowBack()">
-	<img class="ssNext ssButton" src="/images/ssNext.png" onclick="slideshowNext()">
-	<div class="floater"></div>
-	<img id="ssImage" src="">
+	<img class="ssBack ssButton" src="/images/ssBack.png" onclick="slideshowScroll('back')">
+	<img class="ssNext ssButton" src="/images/ssNext.png" onclick="slideshowScroll('next')">
+    <div class="ssBody">
+        <img id="ssImage" src="">
+        <div id="ssBlurb"></div>
+    </div>
 </div>

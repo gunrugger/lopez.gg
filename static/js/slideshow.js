@@ -1,55 +1,79 @@
 //Init the variables in use on the page
 var slideShow = "";
-var slideshowImages = [];
+var slideshowCards = [];
 var currentSlide = 0;
 
 //---HIGH LEVEL SLIDESHOW CONTROLS---//
-function slideshowOn(url)
+function slideshowOn(adventureCard)
 {
+    
     //get the slideshow div
     slideshow = document.getElementsByClassName("slideshow")[0];
-    //populate the slideshowImages array
-    slideshowImages = getSlideshowImages();
+    //populate the slideshowCards array
+    slideshowCards = document.getElementsByClassName("adventureCard");
 
-    setSlideshowImage(url);
+    populateSlide(adventureCard)
     slideshow.classList.remove("disabled");
-    currentSlide = getSlideNumberByUrl(url);
+    currentSlide = getSlideNumberByAdventureCard(adventureCard);
 }
+
+function populateSlide(adventureCard)
+{
+    //Get the elements/strings on adventure card
+    blurbElem = adventureCard.getElementsByClassName("blurb")[0]
+    blurb = blurbElem.textContent
+    imgElem = adventureCard.getElementsByClassName("galleryImage")[0]
+    imgUrl = imgElem.src
+
+    setSlideshowImage(imgUrl);
+    setSlideshowBlurb(blurb);
+}
+
 function slideshowOff()
 {
     slideshow.classList.add("disabled");
 }
 function slideshowFull()
 {
-    thumbUrl = slideshowImages[currentSlide];
+    currentCard = slideshowCards[currentSlide];
+    thumbUrl = currentCard.getElementsByClassName("galleryImage")[0].src
     fullUrl = thumbUrl.replace("/thumb/", "/full/")
     window.open(fullUrl,"_self")
 }
-function slideshowBack()
+
+function slideshowScroll(direction)
 {
-    var limit = slideshowImages.length - 1;
-    if (currentSlide == 0)
+    if (direction == "back")
     {
-        var newSlideIndex = limit;
-    } else {
-        var newSlideIndex = parseInt(currentSlide)-1;
+        var limit = slideshowCards.length - 1;
+        if (currentSlide == 0)
+        {
+            var newSlideIndex = limit;
+        } else {
+            var newSlideIndex = parseInt(currentSlide)-1;
+        }
     }
-    var newSlideUrl = slideshowImages[newSlideIndex];
-    setSlideshowImage(newSlideUrl);
+    if (direction == "next")
+    {
+        var limit = slideshowCards.length - 1;
+        if (currentSlide >= limit)
+        {
+            var newSlideIndex = 0;
+        } else {
+            var newSlideIndex = parseInt(currentSlide)+1;
+        }
+    }
+    var adventureCards = document.getElementById("advCardCont").children;
+    var newSlideCard = adventureCards[newSlideIndex];
+    populateSlide(newSlideCard);
     currentSlide = newSlideIndex;
 }
-function slideshowNext()
+
+
+function setSlideshowBlurb(blurb)
 {
-    var limit = slideshowImages.length - 1;
-    if (currentSlide >= limit)
-    {
-        var newSlideIndex = 0;
-    } else {
-        var newSlideIndex = parseInt(currentSlide)+1;
-    }
-    var newSlideUrl = slideshowImages[newSlideIndex];
-    setSlideshowImage(newSlideUrl);
-    currentSlide = newSlideIndex;
+    elem = document.getElementById("ssBlurb");
+    elem.textContent = blurb;
 }
 
 function setSlideshowImage(url)
@@ -58,35 +82,11 @@ function setSlideshowImage(url)
     elem.src = url;
 }
 
-function getSlideshowImages()
+function getSlideNumberByAdventureCard(adventureCard)
 {
-    //get all gallery images
-    elems = document.getElementsByClassName("galleryImage");
-    var imageUrls = [];
-    //loop through each gallery image
-    for (var i in elems)
+    for (var i in slideshowCards)
     {
-        //get the url of the img tag
-        elem = elems[i];
-        img = elem.src;
-        //drop the url into an array
-        if (img == undefined)
-        {
-            continue;
-        } else if ( img.toLowerCase().indexOf("cover.jpg") > -1 ) {
-            continue;
-        } else {
-            imageUrls.push(img);
-        }
-    }
-    //Replace the gloabal array with the results of the loop
-    return imageUrls;
-}
-function getSlideNumberByUrl(url)
-{
-    for (var i in slideshowImages)
-    {
-        if (slideshowImages[i] == url)
+        if (slideshowCards[i] == adventureCard)
         {
             return i;
             break;

@@ -1,33 +1,41 @@
 {{ $scratch := .Scratch }}
 
-{{ $scratch.Set "currentSection" (print (.Get 0) "/") }}
-{{ $scratch.Set "imgDir" (.Get 1) }}
+{{ $scratch.Set "currentSection" (.Get 0) }}
+{{ $scratch.Set "pageName" (.Get 1) }}
 
 {{ $currentSection := $scratch.Get "currentSection" }}
-{{ $imgDir := $scratch.Get "imgDir" }}
-{{ $file := print $currentSection $imgDir ".md" }}
+{{ $currentSectionDir := print $currentSection "/" }}
+{{ $pageName := $scratch.Get "pageName" }}
+{{ $contentFile := print $currentSectionDir $pageName ".md" }}
 
-    <div class="adventureCardContainer-outer">
+
+
+
+    <div id="advCardCont" class="adventureCardContainer-outer">
     {{ range .Site.Sections }}
         {{ range .Pages }}
-            {{ if eq (print .File) $file }}
-                {{ $baseDir := print "/images/" ($scratch.Get "currentSection") }}
-                {{ $fullDir := print $baseDir "/full/" ($scratch.Get "imgDir") }}
-                {{ $thumbDir := print $baseDir "/thumb/" ($scratch.Get "imgDir") }}
-                {{ $walkDir := print "/static" $thumbDir }}
-                {{ $files := readDir $walkDir }}
-                {{ range $files }}
-                    {{ if ne .Name "cover.jpg" }}
-                        {{ $fullFile := print $fullDir "/" .Name}}
-                        {{ $thumbFile := print $thumbDir "/" .Name}}
-                        <div class="adventureCardContainer-inner">
-                            <div class="adventureCard">
-                                <div class="flexible"></div>
-                                <img onclick="slideshowOn(this.src)" class="galleryImage" src="{{$thumbFile}}">
+            {{ if eq (print .File) $contentFile }}
+                {{ with index .Site.Data $currentSection $pageName }}
+                    {{ $pageData := . }}
+                    {{ $baseDir := print "/images/" ($scratch.Get "currentSection") }}
+                    {{ $fullDir := print $baseDir "/full/" ($scratch.Get "pageName") }}
+                    {{ $thumbDir := print $baseDir "/thumb/" ($scratch.Get "pageName") }}
+                    {{ $walkDir := print "/static" $thumbDir }}
+                    {{ $imgFiles := readDir $walkDir }}
+                    {{ range $imgFiles }}
+                        {{ if ne .Name "cover.jpg" }}
+                            {{ $fullFile := print $fullDir "/" .Name}}
+                            {{ $thumbFile := print $thumbDir "/" .Name}}
+                            <div class="adventureCardContainer-inner">
+                                <div class="adventureCard" onclick="slideshowOn(this)">
+                                    <img class="galleryImage" src="{{$thumbFile}}">
+                                    <div class="flexible"></div>
+                                    {{if isset (index $pageData .Name) "blurb"}}<p class="blurb">{{index $pageData .Name "blurb"}}</p>{{end}}
+                                </div>
                             </div>
-                        </div>
+                        {{ end }}
                     {{ end }}
-                {{ end }}
+                {{end}}
             {{ end }}
         {{ end }}
     {{ end }}

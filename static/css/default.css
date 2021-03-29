@@ -39,3 +39,7 @@ a {
     font-size: 1.5rem;
     text-decoration: none;
 }
+
+.disabled {
+    display: none!important;
+}

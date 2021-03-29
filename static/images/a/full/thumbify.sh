@@ -1,7 +1,7 @@
 #!/bin/bash
 [ -d ../thumb ] || mkdir ../thumb
 if [ $# -eq 0 ]; then
-    echo "Please specify a directory name."
+    echo "Please specify one or more directory names."
     exit 1
 fi
 
