@@ -30,7 +30,7 @@
                                 <div class="adventureCard" onclick="slideshowOn(this)">
                                     <img class="galleryImage" src="{{$thumbFile}}">
                                     <div class="flexible"></div>
-                                    {{if isset (index $pageData .Name) "blurb"}}<p class="blurb">{{index $pageData .Name "blurb"}}</p>{{end}}
+                                    {{if isset (index $pageData .Name) "blurb"}}<div class="blurb">{{index $pageData .Name "blurb"}}</div>{{end}}
                                 </div>
                             </div>
                         {{ end }}

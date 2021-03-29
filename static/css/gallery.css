@@ -28,6 +28,9 @@
 .flexible {
     flex-grow: 1;
 }
+.blurb {
+    white-space: pre-wrap;
+}
 
 /*responsive*/
 @media (min-width: 768px) {
