@@ -29,8 +29,8 @@
                             <div class="adventureCardContainer-inner">
                                 <div class="adventureCard" onclick="slideshowOn(this)">
                                     <img class="galleryImage" src="{{$thumbFile}}">
-                                    <div class="flexible"></div>
                                     {{if isset (index $pageData .Name) "blurb"}}<div class="blurb">{{index $pageData .Name "blurb"}}</div>{{end}}
+                                    <div class="flexible"></div>
                                 </div>
                             </div>
                         {{ end }}
