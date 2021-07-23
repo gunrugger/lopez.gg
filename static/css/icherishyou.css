@@ -5,6 +5,7 @@ body{
     height: 10rem;
 }
 p{
+    max-height: 100000;
     display:inline-block;
     width:100%;
     color:whitesmoke;
