@@ -4,18 +4,18 @@
 <div class="adventureCardContainer-outer">
     {{ range .Site.Sections }}
         {{ range .Pages }}
-            {{ if eq .Dir ($scratch.Get "currentSection") }}
-            {{ $imgDir := replace .File ".md" "" }}
-            {{ $imgDir := replace $imgDir $currentSection "" }}
-            <div class="adventureCardContainer-inner">
-                <div class="adventureCard">
-                    <a href="{{.Permalink}}">
-                        <img src="/images/{{ $currentSection }}thumb/{{$imgDir}}/cover.jpg">
-                        <div class="flexible"></div>
-                        {{.Title}}
-                    </a>
+            {{ if eq .File.Dir ($scratch.Get "currentSection") }}
+                {{ $imgDir := replace .File ".md" "" }}
+                {{ $imgDir := replace $imgDir $currentSection "" }}
+                <div class="adventureCardContainer-inner">
+                    <div class="adventureCard">
+                        <a href="{{.Permalink}}">
+                            <img src="/images/{{ $currentSection }}thumb/{{$imgDir}}/cover.jpg">
+                            <div class="flexible"></div>
+                            {{.Title}}
+                        </a>
+                    </div>
                 </div>
-            </div>
             {{ end }}
         {{ end }}
     {{ end }}
